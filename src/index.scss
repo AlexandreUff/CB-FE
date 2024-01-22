@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Dancing+Script:wght@700&family=Noto+Sans+Osmanya&display=swap');
+
+/* :root {
+} */
+$colorFirst: #E1F0DA;
+$colorSecond: #D4E7C5;
+$colorThrid: #BFD8AF;
+$colorFourth: #99BC85;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+body {
+  background-color: $colorFourth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;  
+
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: $colorFirst; 
+
+    svg {
+      fill: $colorFirst;
+      width: 40px;
+      margin-right: 10px;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+
+    .metrics {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        button {
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+
+            /* Separar estilo */
+            /* background-color: $colorSecond;
+            border: 1px solid $colorFirst;
+            border-radius: 5px; */
+        }
+    }
+
+    .chart-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .graphic-type-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        button {
+            width: 70px;
+            height: 40px;
+            margin: 5px;
+
+            /* Separar estilo */
+            /* background-color: $colorSecond;
+            border: 1px solid $colorFirst;
+            border-radius: 5px; */
+        }
+    }
+}
+
+footer {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    padding: 10px 0px;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $colorFirst;
+    font-size: .7rem;
+
+    small {
+        display: block;
+    }
+}
+
+//Components
+button {
+    background-color: $colorThrid;
+    border: 1px solid $colorFirst;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: .3s;
+
+    &:hover {
+        /* opacity: .7; */
+        background-color: $colorFirst;
+    }
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 30px;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
+}
+
+//Media
+@media(max-width: 800px){
+    main {
+        flex-direction: column-reverse;
+
+        .chart-content {
+            overflow-x: scroll;
+        }
+
+        .metrics, .graphic-type-content {
+            flex-direction: row;
+        }
+    }
+}

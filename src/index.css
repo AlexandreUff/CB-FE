@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Dancing+Script:wght@700&family=Noto+Sans+Osmanya&display=swap");
+/* :root {
+} */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+body {
+  background-color: #99BC85;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: #E1F0DA;
+}
+header svg {
+  fill: #E1F0DA;
+  width: 40px;
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .metrics {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .metrics button {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  /* Separar estilo */
+  /* background-color: $colorSecond;
+  border: 1px solid $colorFirst;
+  border-radius: 5px; */
+}
+main .chart-content {
+  display: flex;
+  justify-content: center;
+}
+main .graphic-type-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .graphic-type-content button {
+  width: 70px;
+  height: 40px;
+  margin: 5px;
+  /* Separar estilo */
+  /* background-color: $colorSecond;
+  border: 1px solid $colorFirst;
+  border-radius: 5px; */
+}
+
+footer {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  padding: 10px 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #E1F0DA;
+  font-size: 0.7rem;
+}
+footer small {
+  display: block;
+}
+
+button {
+  background-color: #BFD8AF;
+  border: 1px solid #E1F0DA;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  /* opacity: .7; */
+  background-color: #E1F0DA;
+}
+
+.upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 30px;
+}
+.upload-button svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  main .chart-content {
+    overflow-x: scroll;
+  }
+  main .metrics, main .graphic-type-content {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
