@@ -27,16 +27,16 @@ header svg {
   margin-right: 10px;
 }
 
-main {
+main .sheet-viewer-content {
   display: flex;
   justify-content: space-evenly;
 }
-main .metrics {
+main .sheet-viewer-content .metrics {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-main .metrics button {
+main .sheet-viewer-content .metrics button {
   width: 70px;
   height: 70px;
   margin: 5px;
@@ -45,16 +45,16 @@ main .metrics button {
   border: 1px solid $colorFirst;
   border-radius: 5px; */
 }
-main .chart-content {
+main .sheet-viewer-content .chart-content {
   display: flex;
   justify-content: center;
 }
-main .graphic-type-content {
+main .sheet-viewer-content .graphic-type-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-main .graphic-type-content button {
+main .sheet-viewer-content .graphic-type-content button {
   width: 70px;
   height: 40px;
   margin: 5px;
@@ -63,12 +63,16 @@ main .graphic-type-content button {
   border: 1px solid $colorFirst;
   border-radius: 5px; */
 }
+main .sheet-controls-content {
+  display: flex;
+  justify-content: center;
+}
 
 footer {
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  padding: 10px 0px;
+  padding: 20px 0px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #E1F0DA;

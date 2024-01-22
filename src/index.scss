@@ -37,46 +37,55 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: space-evenly;
 
-    .metrics {
+    .sheet-viewer-content{
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        button {
-            width: 70px;
-            height: 70px;
-            margin: 5px;
-
-            /* Separar estilo */
-            /* background-color: $colorSecond;
-            border: 1px solid $colorFirst;
-            border-radius: 5px; */
+        justify-content: space-evenly;
+    
+        .metrics {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+    
+            button {
+                width: 70px;
+                height: 70px;
+                margin: 5px;
+    
+                /* Separar estilo */
+                /* background-color: $colorSecond;
+                border: 1px solid $colorFirst;
+                border-radius: 5px; */
+            }
         }
+    
+        .chart-content {
+            display: flex;
+            justify-content: center;
+        }
+    
+        .graphic-type-content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+    
+            button {
+                width: 70px;
+                height: 40px;
+                margin: 5px;
+    
+                /* Separar estilo */
+                /* background-color: $colorSecond;
+                border: 1px solid $colorFirst;
+                border-radius: 5px; */
+            }
+        }
+
     }
 
-    .chart-content {
+    .sheet-controls-content {
         display: flex;
         justify-content: center;
-    }
-
-    .graphic-type-content{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        button {
-            width: 70px;
-            height: 40px;
-            margin: 5px;
-
-            /* Separar estilo */
-            /* background-color: $colorSecond;
-            border: 1px solid $colorFirst;
-            border-radius: 5px; */
-        }
     }
 }
 
@@ -85,7 +94,7 @@ footer {
     align-items: center;
     justify-content: center; */
 
-    padding: 10px 0px;
+    padding: 20px 0px;
 
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
