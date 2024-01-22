@@ -14,7 +14,16 @@ $colorFourth: #99BC85;
 }
 
 body {
-  background-color: $colorFourth;
+    
+
+    background-color: $colorFourth;
+}
+
+.layout-content{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
 }
 
 header {
@@ -37,6 +46,8 @@ header {
 }
 
 main {
+
+    flex-grow: 1;
 
     .sheet-viewer-content{
         display: flex;
