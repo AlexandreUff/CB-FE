@@ -13,10 +13,13 @@ export default function Chart(props){
         }
     }
 
-    console.log("PROPS:", props.data)
+    /* console.log("PROPS:", props.data) */
 
     const series = [{
         data: props.data.map(data => {
+
+            /* console.log("Valor:", parseFloat(data.averageValue.toFixed(2))) */
+
             return {
                 x: new Date(data.monthAndYear).getTime(),
                 y: [data.averageValue]

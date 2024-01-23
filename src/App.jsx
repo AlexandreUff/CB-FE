@@ -1,5 +1,5 @@
 /* import { useState } from 'react' */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Chart from "./components/Charts";
 import GraphicTypeContent from "./components/GraphicTypeContent";
@@ -10,7 +10,12 @@ import APIService from "./service/APIService";
 
 function App() {
   const [hasFile, setHasFile] = useState(false);
+  const [typeRate, setTypeRate] = useState(1)
   const [graphicStyle, setGraphicStyle] = useState("line");
+
+  /* useEffect(()=>{
+
+  },[typeRate]) */
 
   const onDrop = async (acceptedFiles) => {
     // Handle the dropped files and send them to your API
@@ -23,8 +28,7 @@ function App() {
     formData.append('file', fileWillBeSent)
 
     const result = await APIService.post('/upload/sheet', formData)
-    console.log("Tipo", result.map(r => r))
-    console.log("resulto", result)
+    console.log("resulto", result[1].data)
 
     if(!!result){
       setHasFile([...result])
@@ -63,9 +67,14 @@ function App() {
                     name: "Churn Rate",
                   },
                 ]}
+
+                rateTypeRateHandler={(type) => {
+                  console.log("tipo:",type)
+                  setTypeRate(type)
+                }}
               />
               <Chart
-                data={hasFile}
+                data={hasFile[typeRate].data}
                 graphicStyle={graphicStyle}
               />
               <GraphicTypeContent
@@ -85,7 +94,6 @@ function App() {
                 ]}
                 graphicHandler={(style) => {
                   setGraphicStyle(style.toLowerCase())
-                  console.log("Estilo:", graphicStyle)
                 }}
               />
             </div>

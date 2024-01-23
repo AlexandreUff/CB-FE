@@ -6,6 +6,9 @@ export default function Metrics(props){
                     <button
                         title={type.name}
                         key={i+1}
+                        onClick={() => {
+                            props.rateTypeRateHandler(i)
+                        }}
                     >
                         {type.name}
                     </button>
