@@ -27,10 +27,10 @@ class APIService {
             let response
             await fetch(`${this.baseURL}${endPoint}`, {
               method: 'POST',
-              body: JSON.stringify(data),
-              headers: {
-                'Content-Type': 'application/json'
-              }
+              body: data,
+             /*  headers: {
+                'Content-Type': 'multipart/form-data'
+              } */
             })
               .then(async response => {
                 return response.json()
