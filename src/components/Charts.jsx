@@ -18,11 +18,11 @@ export default function Chart(props){
     const series = [{
         data: props.data.map(data => {
 
-            /* console.log("Valor:", parseFloat(data.averageValue.toFixed(2))) */
+            /* console.log("Valor:", parseFloat(data.amount.toFixed(2))) */
 
             return {
                 x: new Date(data.monthAndYear).getTime(),
-                y: [data.averageValue]
+                y: [data.amount]
             }
         })
         /* [
