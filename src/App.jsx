@@ -6,17 +6,30 @@ import GraphicTypeContent from "./components/GraphicTypeContent";
 import { FileSheet, Logo, Upload } from "./components/Icons";
 import Metrics from "./components/Metrics";
 import { useDropzone } from "react-dropzone";
+import APIService from "./service/APIService";
 
 function App() {
   const [hasFile, setHasFile] = useState(false);
 
-  const onDrop = (acceptedFiles) => {
+  const onDrop = async (acceptedFiles) => {
     // Handle the dropped files and send them to your API
     console.log(acceptedFiles);
     // Add logic to send files to API here
+
+    const fileWillBeSent = acceptedFiles[0]
+
+    const formData = new FormData()
+    formData.append('file', fileWillBeSent)
+
+    const result = await APIService.post('/upload/sheet', formData)
+    console.log("resulto", result)
   };
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone(
+    {
+      onDrop,
+      /* accept: ['.xlsx', '.csv'] */
+    });
 
   /* const dropzoneStyle = {
     border: "2px dashed #cccccc",
