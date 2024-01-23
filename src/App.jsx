@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Chart from "./components/Charts";
 import GraphicTypeContent from "./components/GraphicTypeContent";
-import { FileSheet, Logo, Upload } from "./components/Icons";
+import { ArrowDown, FileSheet, Logo, Upload } from "./components/Icons";
 import Metrics from "./components/Metrics";
 import { useDropzone } from "react-dropzone";
 import APIService from "./service/APIService";
@@ -92,7 +92,7 @@ function App() {
               <input {...getInputProps()} />
               {isDragActive ? (
                 <>
-                  <FileSheet />
+                  <span className="arrow-moving"><ArrowDown /></span>
                   <br />
                   <p>Recebendo arquivo...</p>
                 </>

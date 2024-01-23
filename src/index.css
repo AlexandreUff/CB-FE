@@ -100,6 +100,12 @@ main .drop-file-area .dropzone-style svg {
   width: 50px;
   fill: #BFD8AF;
 }
+main .drop-file-area .dropzone-style .arrow-moving {
+  opacity: 0.5;
+  position: relative;
+  top: 0px;
+  animation: down-n-up 0.7s infinite;
+}
 main .drop-file-area .dropzone-style:hover {
   border: 2px dashed #E1F0DA;
   color: #E1F0DA;
@@ -156,6 +162,15 @@ button:hover {
   }
   main .metrics, main .graphic-type-content {
     flex-direction: row;
+  }
+}
+@keyframes down-n-up {
+  0% {
+    top: 0px;
+  }
+  50% {
+    opacity: 1;
+    top: 10px;
   }
 }
 
