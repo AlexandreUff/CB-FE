@@ -71,7 +71,7 @@ export default function Chart(props){
             <ApexCharts
                 options={options}
                 series={series}
-                type="line"
+                type={props.graphicStyle.toLowerCase()}
                 width={640}
                 height={450}
             />

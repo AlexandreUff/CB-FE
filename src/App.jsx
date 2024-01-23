@@ -10,6 +10,7 @@ import APIService from "./service/APIService";
 
 function App() {
   const [hasFile, setHasFile] = useState(false);
+  const [graphicStyle, setGraphicStyle] = useState("line");
 
   const onDrop = async (acceptedFiles) => {
     // Handle the dropped files and send them to your API
@@ -65,6 +66,7 @@ function App() {
               />
               <Chart
                 data={hasFile}
+                graphicStyle={graphicStyle}
               />
               <GraphicTypeContent
                 types={[
@@ -72,16 +74,27 @@ function App() {
                     name: "Line",
                   },
                   {
-                    name: "Pizza",
+                    name: "Bar",
                   },
                   {
-                    name: "Circle",
+                    name: "Area",
+                  },
+                  {
+                    name: "Scatter",
                   },
                 ]}
+                graphicHandler={(style) => {
+                  setGraphicStyle(style.toLowerCase())
+                  console.log("Estilo:", graphicStyle)
+                }}
               />
             </div>
             <div className="sheet-controls-content">
-              <button className="upload-button" title="Subir nova planilha">
+              <button
+                className="upload-button"
+                title="Subir nova planilha"
+                onClick={() => setHasFile(false)}
+              >
                 <Upload /> Subir nova planilha
               </button>
             </div>

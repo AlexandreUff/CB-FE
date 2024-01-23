@@ -6,6 +6,7 @@ export default function GraphicTypeContent(props){
                     <button
                         title={type.name}
                         key={i+1}
+                        onClick={() => props.graphicHandler(type.name)}
                     >
                         {type.name}
                     </button>
