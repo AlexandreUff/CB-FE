@@ -3,11 +3,28 @@ import { useState } from "react";
 import "./App.css";
 import Chart from "./components/Charts";
 import GraphicTypeContent from "./components/GraphicTypeContent";
-import { Logo, Upload } from "./components/Icons";
+import { FileSheet, Logo, Upload } from "./components/Icons";
 import Metrics from "./components/Metrics";
+import { useDropzone } from "react-dropzone";
 
 function App() {
   const [hasFile, setHasFile] = useState(false);
+
+  const onDrop = (acceptedFiles) => {
+    // Handle the dropped files and send them to your API
+    console.log(acceptedFiles);
+    // Add logic to send files to API here
+  };
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
+  /* const dropzoneStyle = {
+    border: "2px dashed #cccccc",
+    borderRadius: "4px",
+    padding: "50px",
+    textAlign: "center",
+    height: "90%"
+  }; */
 
   return (
     <div className="layout-content">
@@ -50,11 +67,20 @@ function App() {
             </div>
           </>
         ) : (
-          
-          <div>
-              I'm Here!
+          <div className="drop-file-area">
+            <div {...getRootProps()} className="dropzone-style" title="Clique aqui ou arraste seu arquivo .xlsx ou .csv">
+              <input {...getInputProps()} />
+              {isDragActive ? (
+                <p>Drop the files here...</p>
+              ) : (
+                <>
+                  <FileSheet />
+                  <br />
+                  <p>Clique aqui ou arraste seu arquivo .xlsx ou .csv</p>
+                </>
+              )}
+            </div>
           </div>
-          
         )}
       </main>
       <footer>
