@@ -67,6 +67,11 @@ main {
                 /* background-color: $colorSecond;
                 border: 1px solid $colorFirst;
                 border-radius: 5px; */
+
+                &.button-selected{
+                    background-color: $colorThrid;
+                    box-shadow: 0px 0px 8px white;
+                }
             }
         }
     
@@ -89,6 +94,11 @@ main {
                 /* background-color: $colorSecond;
                 border: 1px solid $colorFirst;
                 border-radius: 5px; */
+
+                &.button-selected{
+                    background-color: $colorThrid;
+                    box-shadow: 0px 0px 8px white;
+                }
             }
         }
 

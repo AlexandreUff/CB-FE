@@ -7,7 +7,8 @@ export default function GraphicTypeContent(props){
                     <button
                         title={type.name}
                         key={i+1}
-                        onClick={() => props.graphicHandler(type.name)}
+                        onClick={() => props.graphicHandler(i, type.name)}
+                        className={props.rateTypeCurrent === i ? "button-selected" : ""}
                     >
                         {type.name}
                     </button>

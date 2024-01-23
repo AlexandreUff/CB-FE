@@ -72,10 +72,12 @@ function App() {
                   console.log("tipo:",type)
                   setTypeRate(type)
                 }}
+
+                rateTypeCurrent={typeRate}
               />
               <Chart
                 data={hasFile[typeRate].data}
-                graphicStyle={graphicStyle}
+                graphicStyle={graphicStyle.name}
               />
               <GraphicTypeContent
                 types={[
@@ -92,9 +94,13 @@ function App() {
                     name: "Scatter",
                   },
                 ]}
-                graphicHandler={(style) => {
-                  setGraphicStyle(style.toLowerCase())
+                graphicHandler={(id ,style) => {
+                  setGraphicStyle({
+                    id,
+                    name: style.toLowerCase()
+                  })
                 }}
+                rateTypeCurrent={graphicStyle.id}
               />
             </div>
             <div className="sheet-controls-content">

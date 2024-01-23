@@ -13,7 +13,7 @@ export default function Chart(props){
         }
     }
 
-    /* console.log("PROPS:", props.data) */
+    console.log("Tipo grafico:", props.graphicStyle)
 
     const series = [{
         data: props.data.map(data => {
@@ -74,7 +74,7 @@ export default function Chart(props){
             <ApexCharts
                 options={options}
                 series={series}
-                type={props.graphicStyle.toLowerCase()}
+                type={props.graphicStyle/* .toLowerCase() */}
                 width={640}
                 height={450}
             />
