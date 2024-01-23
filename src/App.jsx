@@ -71,7 +71,11 @@ function App() {
             <div {...getRootProps()} className="dropzone-style" title="Clique aqui ou arraste seu arquivo .xlsx ou .csv">
               <input {...getInputProps()} />
               {isDragActive ? (
-                <p>Drop the files here...</p>
+                <>
+                  <FileSheet />
+                  <br />
+                  <p>Recebendo arquivo...</p>
+                </>
               ) : (
                 <>
                   <FileSheet />
