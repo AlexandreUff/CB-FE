@@ -10,7 +10,7 @@ import APIService from "./service/APIService";
 
 function App() {
   const [hasFile, setHasFile] = useState(false);
-  const [typeRate, setTypeRate] = useState(1)
+  const [typeRate, setTypeRate] = useState(0)
   const [graphicStyle, setGraphicStyle] = useState("line");
 
   /* useEffect(()=>{
@@ -61,10 +61,10 @@ function App() {
               <Metrics
                 types={[
                   {
-                    name: "MRR",
+                    name: "Churn Rate",
                   },
                   {
-                    name: "Churn Rate",
+                    name: "MRR",
                   },
                 ]}
 
