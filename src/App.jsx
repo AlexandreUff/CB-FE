@@ -22,7 +22,12 @@ function App() {
     formData.append('file', fileWillBeSent)
 
     const result = await APIService.post('/upload/sheet', formData)
+    console.log("Tipo", result.map(r => r))
     console.log("resulto", result)
+
+    if(!!result){
+      setHasFile([...result])
+    }
   };
 
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone(
@@ -58,7 +63,9 @@ function App() {
                   },
                 ]}
               />
-              <Chart />
+              <Chart
+                data={hasFile}
+              />
               <GraphicTypeContent
                 types={[
                   {

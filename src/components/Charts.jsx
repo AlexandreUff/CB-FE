@@ -1,6 +1,6 @@
 import ApexCharts from "react-apexcharts";
 
-export default function Chart(){
+export default function Chart(props){
 
     const options = {
         xaxis: {
@@ -13,8 +13,16 @@ export default function Chart(){
         }
     }
 
+    console.log("PROPS:", props.data)
+
     const series = [{
-        data: [
+        data: props.data.map(data => {
+            return {
+                x: new Date(data.monthAndYear).getTime(),
+                y: [data.averageValue]
+            }
+        })
+        /* [
             {
                 x: new Date("Sun Jan 15 2017").getTime(),
                 y: [150000000]
@@ -55,7 +63,7 @@ export default function Chart(){
                 x: new Date("Tue Jan 24 2017").getTime(),
                 y: [144381072]
             },
-        ]
+        ] */
     }]
 
     return (
