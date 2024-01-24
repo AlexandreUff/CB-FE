@@ -1,5 +1,6 @@
 class APIService {
-    static baseURL = "http://localhost:3000" /* "http://54.207.135.42:3001" */
+    static env = import.meta.env.VITE_API_URL
+    static baseURL = this.env ? "putkeepareu" : "http://localhost:3000"
 
     static async get(endPoint){
         try {
