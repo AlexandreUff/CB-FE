@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Dancing+Script:wght@700&family=Noto+Sans+Osmanya&display=swap');
 
-/* :root {
-} */
 $colorFirst: #E1F0DA;
 $colorSecond: #D4E7C5;
 $colorThrid: #BFD8AF;
@@ -62,11 +60,6 @@ main {
                 width: 70px;
                 height: 70px;
                 margin: 5px;
-    
-                /* Separar estilo */
-                /* background-color: $colorSecond;
-                border: 1px solid $colorFirst;
-                border-radius: 5px; */
 
                 &.button-selected{
                     background-color: $colorThrid;
@@ -89,11 +82,6 @@ main {
                 width: 70px;
                 height: 40px;
                 margin: 5px;
-    
-                /* Separar estilo */
-                /* background-color: $colorSecond;
-                border: 1px solid $colorFirst;
-                border-radius: 5px; */
 
                 &.button-selected{
                     background-color: $colorThrid;
@@ -159,10 +147,6 @@ main {
 }
 
 footer {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-
     padding: 20px 0px;
 
     text-align: center;
@@ -185,7 +169,6 @@ button {
     transition: .3s;
 
     &:hover {
-        /* opacity: .7; */
         background-color: $colorFirst;
     }
 }

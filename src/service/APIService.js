@@ -34,7 +34,6 @@ class APIService {
               } */
             })
               .then(async response => {
-                console.log(response)
                 return response.json()
               }).then(data => {
                 response = data

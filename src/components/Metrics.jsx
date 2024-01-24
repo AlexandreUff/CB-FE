@@ -10,7 +10,6 @@ export default function Metrics(props){
                             props.rateTypeRateHandler(i)
                         }}
                         className={props.rateTypeCurrent === i ? "button-selected" : ""}
-                        /* style={props.rateTypeCurrent === i && {opacity: 0.5}} */
                     >
                         {type.name}
                     </button>

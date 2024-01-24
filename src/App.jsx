@@ -13,22 +13,14 @@ function App() {
   const [typeRate, setTypeRate] = useState(0)
   const [graphicStyle, setGraphicStyle] = useState("line");
 
-  /* useEffect(()=>{
-
-  },[typeRate]) */
-
   const onDrop = async (acceptedFiles) => {
-    // Handle the dropped files and send them to your API
-    console.log(acceptedFiles);
-    // Add logic to send files to API here
-
+    
     const fileWillBeSent = acceptedFiles[0]
 
     const formData = new FormData()
     formData.append('file', fileWillBeSent)
 
     const result = await APIService.post('/upload/sheet', formData)
-    console.log("resulto", result[1].data)
 
     if(!!result){
       setHasFile([...result])
@@ -38,16 +30,7 @@ function App() {
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone(
     {
       onDrop,
-      /* accept: ['.xlsx', '.csv'] */
     });
-
-  /* const dropzoneStyle = {
-    border: "2px dashed #cccccc",
-    borderRadius: "4px",
-    padding: "50px",
-    textAlign: "center",
-    height: "90%"
-  }; */
 
   return (
     <div className="layout-content">
@@ -69,7 +52,6 @@ function App() {
                 ]}
 
                 rateTypeRateHandler={(type) => {
-                  console.log("tipo:",type)
                   setTypeRate(type)
                 }}
 
