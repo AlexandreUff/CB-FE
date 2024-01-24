@@ -22,7 +22,8 @@ O myStonks é um serviço de renderização gráfica de dados em MRR e Churn Rat
 3) Digite `npm i` para instalar todas as dependências (Obs: Deve-se ter o gerenciador npm instalado em seu dispositivo);
 4) Quando todas as dependências estiverem sido corretamente instaladas, digite `npm run dev`para iniciar a aplicação;
 5) A aplicação irá executar em uma aba do navegador padrão na porta 5173 em localhost dessa forma: "http://localhost:5173/". Caso esta porta já esteja em uso executando uma outra aplicação, o terminal irá sugerir uma nova porta ou já executará automaticamente em uma outra;
-6) A aplicação já está pronta pra seu devido uso;
+6) A API deve, obrigatoriamente, já estar em execução quando iniciar esta aplicação. Caso ainda não tenha tido acesso a ela, [clique aqui](https://github.com/AlexandreUff/CB-BE) para baixá-la;
+7) A aplicação já está pronta pra seu devido uso.
 
 ### Como usar
 1) Ao ser iniciada a aplicação, será exibida uma tela em seu navegador onde você, simplemente, poderá arrastar o arquivo para a área especificada ou, clicando nessa área especificada, selecionar manualmente o arquivo;
