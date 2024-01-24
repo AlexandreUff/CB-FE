@@ -1,6 +1,6 @@
 class APIService {
-    static env = import.meta.env.VITE_API_URL
-    static baseURL = this.env ? "https://mystonks-api.vercel.app" : "http://localhost:3000"
+    /* static env = import.meta.env.VITE_API_URL */
+    static baseURL = /* this.env ? */ "https://mystonks-api.vercel.app" /* : "http://localhost:3000" */
 
     static async get(endPoint){
         try {
