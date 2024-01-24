@@ -13,7 +13,8 @@ O myStonks é um serviço de renderização gráfica de dados em MRR e Churn Rat
 - Javascript;
 - ReactJs (Vite);
 - SASS/SCSS;
-- ApexCharts.
+- ApexCharts;
+- React Dropzone.
 
 ### Como iniciar o myStonks
 
