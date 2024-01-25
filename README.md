@@ -38,7 +38,7 @@ O myStonks é um serviço de renderização gráfica de dados em MRR e Churn Rat
 
 ### Versão de produção (Deploy) da aplicação
 
-[myStonks](https://mystonks.vercel.app/)
+[myStonks](https://mystonks.vercel.app/) (sugiro baixar este repositório)
 
 ### Contato
 [LinkedIn de Alexandre Magno](https://www.linkedin.com/in/alexandre-desenvolvedordesistemas/)
